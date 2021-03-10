@@ -1,0 +1,122 @@
+{
+ "allow_rename": 1,
+ "autoname": "USRREG.####",
+ "creation": "2021-02-09 19:22:21.630748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "mobile_number",
+  "email",
+  "column_break_4",
+  "image",
+  "gender",
+  "language",
+  "invitation_section",
+  "invitation_message",
+  "send_emails",
+  "section_break_9",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nHindi\nMarathi"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "invitation_section",
+   "fieldtype": "Section Break",
+   "label": "Invitation"
+  },
+  {
+   "fieldname": "invitation_message",
+   "fieldtype": "Text Editor",
+   "label": "Invitation Message"
+  },
+  {
+   "depends_on": "eval:doc.status===\"Planned\"",
+   "fieldname": "send_emails",
+   "fieldtype": "Button",
+   "label": "Send Emails"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text Editor",
+   "label": "Address"
+  }
+ ],
+ "image_field": "image",
+ "is_submittable": 1,
+ "modified": "2021-02-12 17:02:02.389163",
+ "modified_by": "Administrator",
+ "module": "Regi App",
+ "name": "New User Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
